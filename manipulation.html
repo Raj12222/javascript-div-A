@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+            div{
+                background-color: aquamarine;
+                height: 400px;
+                width: 400px;
+                margin-top: 2%;
+                margin-left: 2%;
+                padding: 2%;
+            }
+            body{
+                background-color: blueviolet;}
+            h1{
+                color: azure;
+                background-color: pink;
+            }
+            
+
+    </style>
+    <script  src="raj.js"></script>
+</head>
+<body>
+    <h1 align="center"><marquee behavior="" direction=""> First Day Of Java Script. </marquee></h1>
+    <div id="R1"> Hyy I'm Raj. </div>
+    <hr>
+    <input type="button" value="Inline Alert" onclick="alert('This Is Wrong Try Again Next Time ')"> <br><br>
+    <input type="button" value="Confirm Inline" onclick="confirm(' Are you Sure ? Please Check one Time More . ')"><br><br>
+    <input type="button" value="Prompt Inline" onclick="alert(' Enter Your Full Name Here  ')">
+    <hr>
+    <input type="button" value="Internal Alert" onclick=internalalert()> <br><br>
+    <input type="button" value="Internal confirm" onclick=internalconfirm()> <br><br>
+    <input type="button" value="Internal Prompt" onclick=internalprompt()>
+    <hr>
+    <input type="button" value="external Alert" onclick=externalalert()> <br><br>
+    <input type="button" value="external confirm" onclick=externalconfirm()><br><br>
+    <input type="button" value="external Prompt" onclick=externalpromt()>
+    <hr>
+    <input type="button" value="color chang on body " onclick=changecolorbody() > <br><br>
+    <input type="button" value="color chang on body " onclick=promtcolor() ><br><br>
+    <hr>
+    <input type="button" value="color chang on div " onclick=changecolordiv() > <br><br>
+    <input type="button" value="color chang on div" onclick=promptcolordiv() >  <br><br>
+    <hr>
+    <input type="color" id="R2" onchange=changecolor()>
+    <input type="color" id="R3" onchange=changecolordiv()>
+</body>
+<script>
+            function internalalert(){
+                alert("Hello Guys I'm Raj.");
+            }
+
+
+            function internalconfirm(){
+                if(confirm("Are You Sure????"))
+                {
+                    alert("Yesssss");
+
+                }
+                else
+                {
+                    alert("Noooooo");
+                }
+            }
+
+            function internalprompt(){
+
+                var fname=prompt("Enter Your First Name Here");
+                var lname=prompt("Enter Your Last Name Here");
+                alert(fname +" "+ lname);
+            
+            }
+            function changecolorbody(){
+                document.body.style.backgroundColor="pink";
+            }
+            function promtcolor(){
+                document.body.style.backgroundColor=prompt("Enter color :-");
+            }
+            function changecolordiv(){
+                document.getElementById("R1").style.backgroundColor="pink";
+            }
+            function promptcolordiv(){
+                document.getElementById("R1").style.backgroundColor=prompt("Enter color :-");
+            }
+            function changecolor(){
+                document.body.style.backgroundColor=document.getElementById("R2").value;
+            }
+            function changecolordiv(){
+                document.getElementById("R1").style.backgroundColor=document.getElementById("R3").value;
+            }
+
+
+
+</script>
+</html>
